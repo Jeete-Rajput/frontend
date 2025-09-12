@@ -1,10 +1,10 @@
 :root {
-      --primary: #f4f4f9;
-      --sidebar-bg: #2c3e50;
-      --accent: #1abc9c;
-      --danger: #ff6f61;
-      --text: #333;
-      --card-bg: #fff;
+      --primary: #070707;
+      --sidebar-bg: #64a4a5;
+      --accent: #83bc1a;
+      --danger: #220805;
+      --text: #ec1f0c;
+      --card-bg: #b08a8a2c;
     }
 
     * {
@@ -14,7 +14,7 @@
     }
 
     body {
-      font-family: "Poppins", sans-serif;
+      font-family: "poppins", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       background: var(--primary);
       display: flex;
       max-height: 100vh;
@@ -23,11 +23,11 @@
     /* ===== Sidebar ===== */
     .sidebar {
       background: var(--sidebar-bg);
-      color: #fff;
+      color: #160909;
       width: 250px;
       min-height: 100vh;
       padding: 1.5rem;
-      position: sticky;
+      position:sticky;
       top: 0;
     }
 
@@ -62,7 +62,7 @@
 
     .sidebar ul li a:hover {
       color: var(--accent);
-      background-color: #fff1;
+      background-color: rgba(14, 1, 1, 0.894);
     }
 
     /* ===== Main Content ===== */
@@ -99,7 +99,7 @@
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-12px);
     }
 
     .card img {
@@ -133,7 +133,7 @@
     }
 
     .buy-btn:hover {
-      background: #e85a4f;
+      background: #595050;
     }
 
     /* ===== Blog Layout ===== */
@@ -190,7 +190,7 @@
     }
 
     .read-more:hover {
-      background: #16a085;
+      background: #5385d4;
     }
 
     /* ===== Responsive ===== */
@@ -229,3 +229,59 @@
         max-width: 90%;
       }
     }
+    /* Slider container */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Images inside slider */
+.images {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease;
+}
+
+.images img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Slide control for Scorpio N */
+#s1-1:checked ~ .images { transform: translateX(0%); }
+#s1-2:checked ~ .images { transform: translateX(-50%); }
+
+/* Slide control for Scorpio Classic */
+#s2-1:checked ~ .images { transform: translateX(0%); }
+#s2-2:checked ~ .images { transform: translateX(-50%); }
+
+/* Slide control for Thar Roxx */
+#s3-1:checked ~ .images { transform: translateX(0%); }
+#s3-2:checked ~ .images { transform: translateX(-50%); }
+
+/* Navigation dots */
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.nav-btn {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+}
